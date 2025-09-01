@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 
-type MarginValue = string | number;
+type MarginValue = any |string | number;
 type MarginType =
   | MarginValue
   | `${MarginValue} ${MarginValue}`
@@ -21,7 +21,7 @@ interface BlurFadeProps {
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: any | MarginType;
+  inViewMargin?: MarginType | any;
   blur?: string;
 }
 const BlurFade = ({
